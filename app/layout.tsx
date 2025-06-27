@@ -1,0 +1,57 @@
+import type React from "react"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "GameVerse - Discover Hidden Indie Gems",
+  description: "The ultimate platform for discovering amazing indie games and connecting with talented developers.",
+    generator: 'v0.dev'
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className="dark">
+      <head>
+        {/* Analytics Placeholders */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Google Analytics Placeholder
+              // gtag('config', 'GA_MEASUREMENT_ID');
+              
+              // Hotjar Placeholder
+              // (function(h,o,t,j,a,r){ ... })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+              
+              // Microsoft Clarity Placeholder
+              // (function(c,l,a,r,i,t,y){ ... })(window,document,"clarity","script","CLARITY_ID");
+            `,
+          }}
+        />
+      </head>
+      <body className={`${inter.className} bg-gray-950 text-white min-h-screen`}>
+        <Navigation />
+        <main className="pt-16">{children}</main>
+        <Footer />
+
+        {/* Additional Analytics Scripts Before Body Close */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Additional tracking scripts can be placed here
+              console.log('Analytics tracking initialized');
+            `,
+          }}
+        />
+      </body>
+    </html>
+  )
+}
