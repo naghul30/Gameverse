@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "GameVerse - Discover Hidden Indie Gems",
   description: "The ultimate platform for discovering amazing indie games and connecting with talented developers.",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -21,13 +20,23 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        {/* Analytics Placeholders */}
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZ3XWVSFYK"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Google Analytics Placeholder
-              // gtag('config', 'GA_MEASUREMENT_ID');
-              
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-VZ3XWVSFYK');
+            `,
+          }}
+        />
+
+        {/* Hotjar Placeholder */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
               // Hotjar Placeholder
               // (function(h,o,t,j,a,r){ ... })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
               
