@@ -32,20 +32,37 @@ export default function RootLayout({
             `,
           }}
         />
+         {/* Microsoft Clarity */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "tq1wa1u5e0");
+            `,
+          }}
+        />
+
+        {/* Contentsquare */}
+        <script
+          async
+          src="https://t.contentsquare.net/uxa/480645169b6a9.js"
+        ></script>
        
         {/* Hotjar Placeholder */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               // Hotjar Placeholder
-              // (function(h,o,t,j,a,r){<script src="https://t.contentsquare.net/uxa/480645169b6a9.js"></script>})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+              // (function(h,o,t,j,a,r){...})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
               
               // Microsoft Clarity Placeholder
-              // (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","CLARITY_ID");
+              // (function(c,l,a,r,i,t,y){...})(window,document,"clarity","script","CLARITY_ID");
             `,
           }}
+          
         />
       </head>
       <body className={`${inter.className} bg-gray-950 text-white min-h-screen`}>
