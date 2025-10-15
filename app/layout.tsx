@@ -53,7 +53,6 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              <!-- Hotjar Tracking Code for https://gameversea.netlify.app/ -->
               (function(h,o,t,j,a,r){
                   h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                   h._hjSettings={hjid:6547989,hjsv:6};
