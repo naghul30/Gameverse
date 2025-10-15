@@ -53,11 +53,17 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Hotjar Placeholder
-              // (function(h,o,t,j,a,r){...})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-              
-              // Microsoft Clarity Placeholder
-              // (function(c,l,a,r,i,t,y){...})(window,document,"clarity","script","CLARITY_ID");
+              <!-- Hotjar Tracking Code for https://gameversea.netlify.app/ -->
+              <script>
+                  (function(h,o,t,j,a,r){
+                      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                      h._hjSettings={hjid:6547989,hjsv:6};
+                      a=o.getElementsByTagName('head')[0];
+                      r=o.createElement('script');r.async=1;
+                      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                      a.appendChild(r);
+                  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+              </script>
             `,
           }}
           
