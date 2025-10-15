@@ -44,11 +44,6 @@ export default function RootLayout({
             `,
           }}
         />
-
-        {/* Contentsquare */}
-        <script src="https://t.contentsquare.net/uxa/480645169b6a9.js">
-        </script>
-       
         {/* Hotjar Placeholder */}
         <script
           dangerouslySetInnerHTML={{
